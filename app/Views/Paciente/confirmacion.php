@@ -18,8 +18,8 @@ if (!isset($_SESSION['nombre_user']))
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sistema Electrónico de Citas</title>
 
-    <link rel="stylesheet" href="Escoger_Centro_Hospitalario.css">
-    <link rel="shortcut icon" href="logo_css.png" type="image/x-icon">
+    <link rel="stylesheet" href="Design/CSS/Escoger_Centro_Hospitalario.css">
+    <link rel="shortcut icon" href="Design/Image/logo_css.png" type="image/x-icon">
     <meta http-equiv="refresh" content="3;url=./Escoger_Centro_Hospitalario.php" />
 </head>
 
@@ -30,12 +30,12 @@ if (!isset($_SESSION['nombre_user']))
 
             <!--logo-->
             <div>
-            <a href=""><img class="logo" src="circulo_fondo_logo_css.png" alt="Spoilers"></a>
+            <a href=""><img class="logo" src="Design/Image/circulo_fondo_logo_css.png" alt=""></a>
             <!--menu-->
             </div>
             <ul>
                 <h1 class="det">Sistema Electrónico de Citas</h1>
-                <a href="LoginorSignin.html"><img class="user" src="usuario.png" alt=""></a>
+                <a href="#"><img class="user" src="Design/Image/usuario.png" alt=""></a>
             </ul>
         </nav>
     </header>

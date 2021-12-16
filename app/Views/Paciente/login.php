@@ -63,8 +63,8 @@ function login_usuario(){
 <head>
 <meta charset="UTF-8">
 <title>Iniciar sesión</title>
-<link rel="stylesheet" href="pfestilos.css">
-<link rel="icon" href="logo1.png">
+<link rel="stylesheet" href="Design/CSS/pfestilos.css">
+<link rel="icon" href="Design/Image/logo1.png">
 </head>
 <body>
 <h1 style="text-shadow: 3px 2px #000000"><img src="logo1.png" width="100" height="100" align="center" style="margin-right: 20px">SISTEMA ELECTRÓNICO DE CITAS</h1>
@@ -74,9 +74,9 @@ function login_usuario(){
 	<input style="text-align: center" type="text" name="user" required><br><br>
 	<label for="contrasena">Contraseña</label><br>
 	<input style="text-align: center" type="password" name="password" required><br><br><br>
-	<input style="font-size:15px; background-color: transparent; color:#78d9ff; border:none; cursor:pointer; font-weight: bold" name= "ingresar" type="submit" value="Ingresar">
+	<input style="font-size:15px; background-color: transparent; color:#78d9ff; border:none; cursor:pointer; font-weight: bold" type="submit" value="Ingresar">
 	<br><a href="register.php">Registrarse</a> <br>
-    Para medicos: <a href="login_medicos.php">Login Medicos</a>
+    Para medicos: <a href="Views/Medico/login_medicos.php">Login Medicos</a>
 </form>
 <p>
 

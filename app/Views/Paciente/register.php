@@ -44,8 +44,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
 <head>
 <meta charset="UTF-8">
 <title>Registrarse</title>
-<link rel="stylesheet" href="pfestilos.css">
-<link rel="icon" href="logo1.png">
+<link rel="stylesheet" href="Design/CSS/pfestilos.css">
+<link rel="icon" href="Design/Image/logo1.png">
 </head>
 <body>
 <h1><img src="logo1.png" width="100" height="100" align="center" style="margin-right: 20px">SISTEMA ELECTRÓNICO DE CITAS</h1><br>
@@ -54,7 +54,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
 <table align="center">
 <tr>
 <td>
-<form method = "POST" action="register.php">
+<form method = "post" action="register.php">
 	<label for="nombre">Nombre</label><br>
 	<input type="text" name="nombre"  value="<?php echo $nombre; ?>"><br><br>
 	<label for="apellido">Apellido</label><br>

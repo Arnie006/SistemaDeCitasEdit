@@ -37,8 +37,8 @@ if (isset($_POST['ingresar_cita'])){
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Reservar Citas</title>
 
-    <link rel="stylesheet" href="Reservar_Cita_ComplejoHospitalarioArnulfoAM.css">
-    <link rel="shortcut icon" href="logo_css.png" type="image/x-icon">
+    <link rel="stylesheet" href="Design/CSS/Reservar_Cita_ComplejoHospitalarioArnulfoAM.css">
+    <link rel="shortcut icon" href="Design/Image/logo_css.png" type="image/x-icon">
 </head>
 
 <body>
@@ -48,12 +48,12 @@ if (isset($_POST['ingresar_cita'])){
 
             <!--logo-->
             <div>
-            <a href=""><img class="logo" src="circulo_fondo_logo_css.png" alt="Spoilers"></a>
+            <a href=""><img class="logo" src="Design/Image/circulo_fondo_logo_css.png" alt=""></a>
             <!--menu-->
             </div>
             <ul>
                 <h1 class="det">Sistema Electrónico de Citas</h1>
-                <a href="LoginorSignin.html"><img class="user" src="usuario.png" alt=""></a>
+                <a href="#"><img class="user" src="Design/Image/usuario.png" alt=""></a>
             </ul>
         </nav>
     </header>
@@ -61,7 +61,7 @@ if (isset($_POST['ingresar_cita'])){
     <main>
         <section class="cuerpo">
             <div class="mas-detalles">
-                <img class="user_info" src="usuario.png" alt="">
+                <img class="user_info" src="Design/Image/usuario.png" alt="">
                 <h2>Buen dia, <?php echo implode(', ', $_SESSION['nombre_user']); echo ' '; echo implode(', ', $_SESSION['apellido_user']); ?></h2>
             </div>
         </section>
@@ -69,7 +69,7 @@ if (isset($_POST['ingresar_cita'])){
         <div class="div_menu_sistema">
                 <h3><a class="btn_reservarcitahover" href="Escoger_Centro_Hospitalario.php"><font color="#3498DB">Reservar Citas</font></a></h3>
                 <h3><a class="btn_reservarcitahover" href="citasrecientes.php">Citas Recientes</a></h3>
-                <h3><a class="btn_reservarcitahover" href="pfcontacto.php">Contáctenos</a></h3>
+                <h3><a class="btn_reservarcitahover" href="Views/Home/pfcontacto.php">Contáctenos</a></h3>
             </div>
         </section>
         <section class="nombre_hospital_sistema">
@@ -158,7 +158,7 @@ if (isset($_POST['ingresar_cita'])){
         
         <section>
             <div class="ir_atras">
-                <a href="Escoger_Centro_Hospitalario.php"><img class="botonatras" src="icono_salir.png" alt=""></a>
+                <a href="Escoger_Centro_Hospitalario.php"><img class="botonatras" src="Design/Image/icono_salir.png" alt=""></a>
                 <p class="texto_salir">Salir</p>
             </div>
         </section>
