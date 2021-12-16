@@ -54,8 +54,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'EDIT' || ($_SERVER['REQUEST_METHOD'] == 'POST
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Citas Recientes</title>
 
-    <link rel="stylesheet" href="Design/CSS/Citas_Recientes.css">
-    <link rel="shortcut icon" href="Design/Image/logo_css.png" type="image/x-icon">
+    <?php 
+    $root = realpath($_SERVER["DOCUMENT_ROOT"]);
+    ?>
+
+    <link rel="stylesheet" href="<?php $root;?>/sistemadecitas-main/app/Design/CSS/Citas_Recientes.css">
+    <link rel="shortcut icon" href="<?php $root;?>/sistemadecitas-main/app/Design/Image/logo_css.png" type="image/x-icon">
 </head>
 
 <body>
@@ -65,12 +69,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'EDIT' || ($_SERVER['REQUEST_METHOD'] == 'POST
 
             <!--logo-->
             <div>
-            <a href=""><img class="logo" src="Design/Image/circulo_fondo_logo_css.png" alt="Spoilers"></a>
+            <a href=""><img class="logo" src="<?php $root;?>/sistemadecitas-main/app/Design/Image/circulo_fondo_logo_css.png" alt="Spoilers"></a>
             <!--menu-->
             </div>
             <ul>
                 <h1 class="det">Sistema Electrónico de Citas</h1>
-                <a href="#"><img class="user" src="Design/Image/usuario.png" alt=""></a>
+                <a href="#"><img class="user" src="<?php $root;?>/sistemadecitas-main/app/Design/Image/usuario.png" alt=""></a>
             </ul>
         </nav>
     </header>
@@ -78,7 +82,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'EDIT' || ($_SERVER['REQUEST_METHOD'] == 'POST
     <main>
         <section class="cuerpo">
             <div class="mas-detalles">
-                <img class="user_info" src="Design/Image/usuario.png" alt="">
+                <img class="user_info" src="<?php $root;?>/sistemadecitas-main/app/Design/Image/usuario.png" alt="">
                 <h2>Buen dia, <?php echo implode(', ', $_SESSION['nombre_user']); echo ' '; echo implode(', ', $_SESSION['apellido_user']); ?></h2>
             </div>
         </section>
@@ -86,7 +90,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'EDIT' || ($_SERVER['REQUEST_METHOD'] == 'POST
             <div class="div_menu_sistema">
                 <h3><a class="btn_reservarcitahover" href="Escoger_Centro_Hospitalario.php">Reservar Citas</a></h3>
                 <h3><a class="btn_reservarcitahover" href="*"><font color="#2ECC71">Citas Recientes</font></a></h3>
-                <h3><a class="btn_reservarcitahover" href="Views/Home/pfcontacto.php">Contáctenos</a></h3>
+                <h3><a class="btn_reservarcitahover" href="<?php $root;?>/sistemadecitas-main/app/Views/Home/pfcontacto.php">Contáctenos</a></h3>
             </div>
         </section>
 
@@ -155,7 +159,7 @@ while($row = mysqli_fetch_array($mostrar_citas)){
         
         <section>
             <div class="ir_atras">
-                <img class="botonatras" src="Design/Image/icono_salir.png" alt="">
+                <img class="botonatras" src="<?php $root;?>/sistemadecitas-main/app/Design/Image/icono_salir.png" alt="">
                 <p class="texto_salir">Salir</p>
             </div>
         </section>
