@@ -8,17 +8,17 @@ services:
           - ./MySQL:/var/lib/mysql
         restart: unless-stopped
         environment:
-          - MYSQL_ROOT_PASSWORD=clave123
-          - MYSQL_DATABASE=mi_db
+          - MYSQL_ROOT_PASSWORD=Fito!3995799
+          - MYSQL_DATABASE=ingweb
         ports:
-          - "3306:3306"
+          - "3000:3306"
   apache-php:
     container_name: apache-php
     build:
       context: ./
     volumes:
-      - ./app:/var/www/html
+      - ./app/Views/Paciente:/var/www/html
     ports:
-      - 80:80
+      - 81:80
     depends_on:
       - mysql
