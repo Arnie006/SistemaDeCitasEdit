@@ -1,0 +1,527 @@
+
+
+* {
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  form {
+      margin-top: 0px;
+  }
+
+
+/* ---------------Documento CSS
+--------------------------------------------Cuerpo del Documento*/
+body{
+    /* Cambiar color de fondo*/
+    background-color:rgb(66, 66, 66);
+    margin: 0px;
+    padding: 0px;
+}
+
+/*-------------------------Cambiar color de texto y ajustes de la barra de navegacion------------------------------------*/
+a{
+    text-decoration: none;
+    color: white;
+}
+
+nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 108px;
+    /* Cambiar color*/
+    background-color:rgb(46, 95, 145);
+    box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.2);
+    color: white;
+    font-size: 25px;
+}
+
+nav ul{
+    display: flex;
+}
+
+.logo{
+    position: relative;
+    top: -2px; /* ajuste de valores para mover la imagen */
+    left: -204px;
+    width: 80px;
+    height: 80px;
+    margin: 30%;
+    display: block;
+}
+
+.user {
+    position: relative;
+    top: -2px; /* ajuste de valores para mover la imagen */
+    left: 176px;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin: 30%;
+    border:2px solid #fff;
+    display: block;
+
+}
+
+/*Ajuste del estilo del cuerpo del documento*/
+
+.user_info {
+    position: relative;
+    top: -2px; /* ajuste de valores para mover la imagen */
+    left: 0px;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin: 3%;
+    border:2px solid #fff;
+    display: block;
+
+}
+
+.cuerpo{
+    display: grid;
+    padding: 30px;
+    padding-top: 60px;
+    padding-left: 48px;
+    width: 600px;
+    height: 139px;
+    align-self: center;
+    align-items: center;
+}
+
+.cuerpo2{
+    display: grid;
+    padding: 30px;
+    padding-left: 48px;
+    width: 600px;
+    align-self: center;
+    align-items: center;
+    position: relative;
+    top: -918px;
+}
+
+.mas-detalles{
+    background-color: rgb(148, 149, 152);
+    display: flex;
+    box-shadow: 0 0 20px 0 rgba(39, 38, 38, 0.281), 0 5px 5px 0 rgba(0, 0, 0, 0.377);
+}
+
+.mas-detalles2{
+    background-color: rgb(188, 189, 192); 
+    box-shadow: 0 0 20px 0 rgba(39, 38, 38, 0.281), 0 5px 5px 0 rgba(0, 0, 0, 0.377);
+}
+
+.mas-detalles2 h2, .mas-detalles2 p {
+    margin: 20px;
+    margin-bottom: 30px;
+    margin-top: 33px;
+    margin-left: 27px;
+}
+
+.mas-detalles2 p{
+    text-align: justify;
+    color: black;
+    padding-bottom: 0px;
+    margin-right: 20px;
+    display: inline-flex;
+}
+
+main h2{
+
+    color: rgb(253, 253, 253);
+    padding-left: 0px;
+    position: relative;
+    top: 18px;
+}
+
+/*--------------------------------Botones, input y texto-------------------------------*/
+.botonatras{
+    align-items: initial;
+    width: 60px;
+    height: 60px;
+    margin: 3%;
+    margin-left: 56px;
+    margin-right: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    display: block;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.281), 0 5px 5px 0 rgba(0, 0, 0, 0.377);
+    border-collapse: collapse;
+    border-radius: 18px;
+    border: 0px;
+    display: inline;
+}
+
+.texto_salir{
+    color: white;
+    display: flex;
+    align-items: center;
+    float: bottom;
+}
+
+.ir_atras{
+    display: inline-flex;
+    margin-bottom: 0px;
+    position: relative;
+    top: -716px;
+}
+
+.menu_sistema {
+    display: grid;
+}
+
+.div_menu_sistema h3{
+    float: left;
+    padding: 20px;
+    color: white;
+    width: 16%;
+    position: relative;
+    top: -115px;
+    left: 700px;
+    text-decoration: underline;
+    text-shadow: 8px 8px 12px black;
+}
+
+.btn_letra_ver_perfil{
+    color: white;
+    position: relative;
+    left: 356px;
+    top: -51px;
+}
+
+u{
+    color: white;
+}
+
+label {
+    display: block;
+    font: 1rem 'Fira Sans', sans-serif;
+}
+
+input,
+label {
+    margin: .4rem 0;
+}
+
+.menu_fecha_sistema{
+    display: grid;
+}
+
+.menu_fecha{
+    float: left;
+    padding: 20px;
+    color: white;
+    width: 16%;
+    position: relative;
+    top: -142px;
+    left: 690px;
+}
+
+
+.hora_cita_sistema{
+    display: grid;
+}
+
+.hora_cita{
+    float: left;
+    padding: 20px;
+    color: white;
+    width: 16%;
+    position: relative;
+    top: -166px;
+    left: 690px;
+    font-size: medium;
+}
+
+.selec_hora{
+    width: 100px;
+    height: 35px;
+}
+
+.btn_1{
+    display: block;
+    width: 96px;
+    height: 42px;
+    border-radius: 6%;
+    border-color: white;
+}
+
+.btn_1_1{
+    display: block;
+    width: 96px;
+    height: 42px;
+    border-radius: 6%;
+    border-color: white;
+    position: relative;
+    top: -358px;
+}
+
+.btn_2{
+    display: block;
+    width: 96px;
+    height: 42px;
+    border-radius: 6%;
+    border-color: white;
+    position: relative;
+    top: -49px;
+    left: 111px;
+}
+
+.btn_2_1{
+    display: block;
+    width: 96px;
+    height: 42px;
+    border-radius: 6%;
+    border-color: white;
+    position: relative;
+    top: -406px;
+    left: 111px;
+}
+
+.btn_3{
+    display: block;
+    width: 96px;
+    height: 42px;
+    border-radius: 6%;
+    border-color: white;
+    position: relative;
+    top: -98px;
+    left: 219px;
+}
+
+.btn_3_1{
+    display: block;
+    width: 96px;
+    height: 42px;
+    border-radius: 6%;
+    border-color: white;
+    position: relative;
+    top: -454px;
+    left: 219px;
+}
+
+.btn_4{
+    display: block;
+    width: 96px;
+    height: 42px;
+    border-radius: 6%;
+    border-color: white;
+    position: relative;
+    top: -147px;
+    left: 327px;
+}
+
+.btn_4_1{
+    display: block;
+    width: 96px;
+    height: 42px;
+    border-radius: 6%;
+    border-color: white;
+    position: relative;
+    top: -502px;
+    left: 327px;
+}
+
+.btn_5{
+    display: block;
+    width: 96px;
+    height: 42px;
+    border-radius: 6%;
+    border-color: white;
+    position: relative;
+    top: -196px;
+    left: 435px;
+}
+
+.btn_5_1{
+    display: block;
+    width: 96px;
+    height: 42px;
+    border-radius: 6%;
+    border-color: white;
+    position: relative;
+    top: -550px;
+    left: 435px;
+}
+
+.btn_6{
+    display: block;
+    width: 96px;
+    height: 42px;
+    border-radius: 6%;
+    border-color: white;
+    position: relative;
+    top: -245px;
+    left: 543px;
+}
+
+.btn_6_1{
+    display: block;
+    width: 96px;
+    height: 42px;
+    border-radius: 6%;
+    border-color: white;
+    position: relative;
+    top: -598px;
+    left: 543px;
+}
+
+.btn_7{
+    display: block;
+    width: 96px;
+    height: 42px;
+    border-radius: 6%;
+    border-color: white;
+    position: relative;
+    top: -294px;
+    left: 651px;
+}
+
+.btn_7_1{
+    display: block;
+    width: 96px;
+    height: 42px;
+    border-radius: 6%;
+    border-color: white;
+    position: relative;
+    top: -646px;
+    left: 651px;
+}
+
+.btn_8{
+    display: block;
+    width: 96px;
+    height: 42px;
+    border-radius: 6%;
+    border-color: white;
+    position: relative;
+    top: -343px;
+    left: 759px;
+}
+
+.btn_8_1{
+    display: block;
+    width: 96px;
+    height: 42px;
+    border-radius: 6%;
+    border-color: white;
+    position: relative;
+    top: -694px;
+    left: 759px;
+}
+
+.btn_9{
+    display: block;
+    width: 96px;
+    height: 42px;
+    border-radius: 6%;
+    border-color: white;
+    position: relative;
+    top: -392px;
+    left: 867px;
+}
+
+.btn_9_1{
+    display: block;
+    width: 96px;
+    height: 42px;
+    border-radius: 6%;
+    border-color: white;
+    position: relative;
+    top: -742px;
+    left: 867px;
+}
+
+.especialidad_medico_sistema{
+    display: grid;
+}
+
+.especialidad_medico{
+    float: left;
+    padding: 20px;
+    color: white;
+    width: 16%;
+    position: relative;
+    top: -185px;
+    left: 690px;
+    font-size: medium;
+}
+
+.selec_especialidad{
+    width: 220px;
+    height: 35px;
+}
+
+.motivo_cita_sistema{
+    display: grid;
+}
+
+.motivo_cita{
+    float: left;
+    padding: 20px;
+    color: white;
+    width: 16%;
+    position: relative;
+    top: -196px;
+    left: 690px;
+    font-size: medium;
+}
+
+.modifmotcita{
+    width: 500px;
+    height: 100px;
+}
+
+.boton_enviar_sistema{
+    display: grid;
+}
+
+.boton_enviar{
+    float: left;
+    padding: 20px;
+    color: white;
+    width: 16%;
+    position: relative;
+    top: -180px;
+    left: 693px;
+    font-size: medium;
+}
+
+.btn_enviar{
+    display: block;
+    width: 125px;
+    height: 50px;
+    border-radius: 4%;
+    border-color: white;
+    position: relative;
+    top: -34px;
+    left: 0px;
+    text-decoration: underline;
+}
+
+
+.btn_reservarcitahover:hover{
+    color: #1E8449;
+}
+
+.btn_enviar:hover{
+    color: #1E8449;
+}
+
+.nombre_hospital_sistema{
+    display: grid;
+}
+
+.nombre_hospital{
+    float: left;
+    padding: 20px;
+    color: white;
+    width: 50%;
+    position: relative;
+    top: -134px;
+    left: 693px;
+    font-size: x-large;
+    text-transform: uppercase;
+    color: rgb(142, 188, 234);
+}
+
