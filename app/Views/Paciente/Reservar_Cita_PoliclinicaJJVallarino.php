@@ -53,7 +53,7 @@ if (isset($_POST['ingresar_cita'])){
 
             <!--logo-->
             <div>
-            <a href=""><img class="logo" src="<?php $root;?>/Design/Image/circulo_fondo_logo_css.png" alt="Spoilers"></a>
+            <a href=""><img class="logo" src="<?php $root;?>/Design/Image/circulo_fondo_logo_css.png" alt=""></a>
             <!--menu-->
             </div>
             <ul>
