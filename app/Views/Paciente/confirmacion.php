@@ -18,6 +18,10 @@ if (!isset($_SESSION['nombre_user']))
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sistema Electrónico de Citas</title>
 
+    <?php 
+    $root = realpath($_SERVER["DOCUMENT_ROOT"]);
+    ?>
+
     <link rel="stylesheet" href="Design/CSS/Escoger_Centro_Hospitalario.css">
     <link rel="shortcut icon" href="Design/Image/logo_css.png" type="image/x-icon">
     <meta http-equiv="refresh" content="3;url=./Escoger_Centro_Hospitalario.php" />
