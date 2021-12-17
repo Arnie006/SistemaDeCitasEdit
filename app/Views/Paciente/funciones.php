@@ -6,12 +6,12 @@ require "$root/config.php";
 
 
 class Usuarios{
-    function registrarUser($a,$b,$c,$d,$e,$f){
+    public function registrarUser($a,$b,$c,$d,$e,$f){
 
         $root = realpath($_SERVER["DOCUMENT_ROOT"]);
         require "$root/config.php";
         
-        $success = FALSE;
+        //$success = FALSE;
 
         $user_check_query = "SELECT * FROM users WHERE username='$a'";
         $result = mysqli_query($link, $user_check_query);
@@ -19,27 +19,27 @@ class Usuarios{
         
         if ($user['username'] === $a) {
             $_SESSION['error'] = "El usuario ya existe";
-            return $success;
+          //  return $success;
             header('location:error.php');
             }else{
                 $sql_registro = "insert into users (username, password, nombre, apellido, correo, telefono) values ( '$a', '$d', '$b', '$c', '$e', '$f');";
                 mysqli_query($link, $sql_registro);
-                $success = TRUE;
-                return $success;
+            //    $success = TRUE;
+            //    return $success;
                 header("location:http://localhost:81/index.php");
             }
         
         
         }
         
-    function addCita($a,$b,$c,$d){
+    public function addCita($a,$b,$c,$d){
             $root = realpath($_SERVER["DOCUMENT_ROOT"]);
             require "$root/config.php";
             $cita_check_query = "SELECT fecha FROM prueba_citas WHERE fecha='$b' and id_medico='$a'";
             $result = mysqli_query($link, $cita_check_query) or die (mysqli_error($link));
             $cita = mysqli_fetch_assoc($result);  
         
-            $success = FALSE;
+            //$success = FALSE;
 
             if ($cita['fecha'] === $b){
                 $_SESSION['error'] = "El doctor ya tiene una cita para el horario seleccionado";
@@ -49,8 +49,8 @@ class Usuarios{
                 $addcita_sql = "insert into prueba_citas (fecha, id_paciente, correo_paciente, id_medico) values ('$b', '$c', '$d', '$a');"; 
                 $query = mysqli_query($link, $addcita_sql);
 
-                $success = TRUE;
-                return $success;
+              //  $success = TRUE;
+                //return $success;
                 
                 header("location: confirmacion.php");
             
@@ -60,14 +60,14 @@ class Usuarios{
         
         }
         
-    function editarCita($a,$b,$c){   
+    public function editarCita($a,$b,$c){   
             $root = realpath($_SERVER["DOCUMENT_ROOT"]);
             require "$root/config.php"; 
             $cita_check_query = "SELECT fecha FROM prueba_citas WHERE fecha='$a' and id_medico='$c'";
             $result = mysqli_query($link, $cita_check_query) or die (mysqli_error($link));
             $cita = mysqli_fetch_assoc($result);  
         
-            $success = FALSE;
+            //$success = FALSE;
 
             if ($cita['fecha'] === $a){
                 $error = "El doctor ya tiene una cita para el horario seleccionado";
@@ -75,13 +75,25 @@ class Usuarios{
                 $addcita_sql = "UPDATE prueba_citas set fecha = '$a' where id_citas =".$b; 
                 $query = mysqli_query($link, $addcita_sql);
 
-                $success = TRUE;
-                return $success;
+              //  $success = TRUE;
+              //  return $success;
                 
                 header("location: confirmacion.php");
             
             }
         }
 
-
+    public function login_usuario($a){
+            
+            //si algo salio en el query de sql, deja loggear a la persona
+            if($a == 1) {
+                $success = TRUE;
+                return $success;
+                header("location: Views/Paciente/Escoger_Centro_Hospitalario.php");
+            }else {
+                $success = FALSE;
+                return $success;
+                $error = "*Cédula o contraseña incorrectos. Por favor verifique sus datos e intente nuevamente";
+            }
+    }
 }

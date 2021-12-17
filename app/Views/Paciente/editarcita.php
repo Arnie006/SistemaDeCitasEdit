@@ -21,7 +21,8 @@ if (isset($_POST['ingresar_cita'])){
     $hora = mysqli_real_escape_string($link,$_POST['hora']);
     $date = $fecha . $hora;
 
-    editarCita($date,$id_importante,$doctor);
+    $funcion = new Usuarios();
+    $funcion->editarCita($date,$id_importante,$doctor);
     
     
 }

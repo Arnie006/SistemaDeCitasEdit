@@ -1,22 +1,21 @@
 <?php
+$root = realpath($_SERVER["DOCUMENT_ROOT"]);
 session_start();
 $error= "";
+require "$root/Views/Paciente/funciones.php";
+require "$root/config.php";
 
 if(isset($_POST['ingresar'])){
-    login_usuario();
-}
 
-
-function login_usuario(){
-    $root = realpath($_SERVER["DOCUMENT_ROOT"]);
     require "$root/config.php"; //conexion a la bdd
-    if($_SERVER["REQUEST_METHOD"] == "POST") {
         //revisa las variables enviadas desde el form
         
         $myusername = mysqli_real_escape_string($link,$_POST['user']);
         $mypassword = mysqli_real_escape_string($link,$_POST['password']); 
         $_SESSION['cedula'] = $myusername;
     
+
+        
         //revisa el id del usuario que se intenta loggear
         $sql = "SELECT id_users FROM users WHERE username = '$myusername' and password = '$mypassword'";
         $result = mysqli_query($link,$sql) or die (mysqli_error($link));
@@ -45,15 +44,13 @@ function login_usuario(){
         $telefono_sesion = mysqli_fetch_assoc($telefono_row);
         $_SESSION['telefono_user'] = $telefono_sesion;
     
-    
-        //si algo salio en el query de sql, deja loggear a la persona
-        if($count == 1) {
-            header("location: Views/Paciente/Escoger_Centro_Hospitalario.php");
-        }else {
-           $error = "*Cédula o contraseña incorrectos. Por favor verifique sus datos e intente nuevamente";
-        }
-     }
+            $funcion = new Usuarios();
+            $funcion->login_usuario($count);
+
 }
+
+
+
 
 
 ?>

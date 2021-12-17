@@ -24,7 +24,8 @@ if (isset($_POST['ingresar_cita'])){
     $date = $fecha . $hora;
 
 
-    addCita($doctor,$date,$id,$correo);
+    $funcion = new Usuarios();
+    $funcion->addCita($doctor,$date,$id,$correo);
     
 }
 

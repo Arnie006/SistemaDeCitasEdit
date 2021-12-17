@@ -32,7 +32,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
         $_SESSION['error'] = "Error en caracteres para Telefono, usar unicamentre valores numericos"; 
         header('location:error.php');
     }else{
-        registrarUser($username,$nombre,$apellido,$password,$email,$tel); 
+        $funcion = new Usuarios();
+        $funcion->registrarUser($username,$nombre,$apellido,$password,$email,$tel); 
 
     }
 
