@@ -19,7 +19,7 @@ if ($user['username'] === $a) {
     }else{
         $sql_registro = "insert into users (username, password, nombre, apellido, correo, telefono) values ( '$a', '$d', '$b', '$c', '$e', '$f');";
         mysqli_query($link, $sql_registro);
-        header('location: login.php');
+        header('location: index.php');
     }
 
 
@@ -34,7 +34,7 @@ function addCita($a,$b,$c,$d){
 
     if ($cita['fecha'] === $b){
         $_SESSION['error'] = "El doctor ya tiene una cita para el horario seleccionado";
-        header('location:error.php');
+        header('location: error.php');
     }else{
         $addcita_sql = "insert into prueba_citas (fecha, id_paciente, correo_paciente, id_medico) values ('$b', '$c', '$d', '$a');"; 
         $query = mysqli_query($link, $addcita_sql);

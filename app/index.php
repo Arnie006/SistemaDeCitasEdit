@@ -82,7 +82,7 @@ function login_usuario(){
 	<label for="contrasena">Contraseña</label><br>
 	<input style="text-align: center" type="password" name="password" required><br><br><br>
 	<input style="font-size:15px; background-color: transparent; color:#78d9ff; border:none; cursor:pointer; font-weight: bold" name= "ingresar" type="submit" value="Ingresar">
-	<br><a href="register.php">Registrarse</a> <br>
+	<br><a href="<?php $root;?>/Views/Paciente/register.php">Registrarse</a> <br>
     Para medicos: <a href="Views/Medico/login_medicos.php">Login Medicos</a>
 </form>
 <p>

@@ -44,12 +44,18 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
 <head>
 <meta charset="UTF-8">
 <title>Registrarse</title>
-<link rel="stylesheet" href="Design/CSS/pfestilos.css">
-<link rel="icon" href="Design/Image/logo1.png">
+
+<?php 
+    $root = realpath($_SERVER["DOCUMENT_ROOT"]);
+    
+?>
+
+<link rel="stylesheet" href="<?php $root;?>/Design/CSS/pfestilos.css">
+<link rel="icon" href="<?php $root;?>/Design/Image/logo1.png">
 </head>
 <body>
-<h1><img src="logo1.png" width="100" height="100" align="center" style="margin-right: 20px">SISTEMA ELECTRÓNICO DE CITAS</h1><br>
-<a href="pfcontacto.html" style="bottom:0; right:0; right:0; text-align:right; font-size:12px">Contáctenos</a>
+<h1><img src="<?php $root;?>/Design/Image/logo1.png" width="100" height="100" align="center" style="margin-right: 20px">SISTEMA ELECTRÓNICO DE CITAS</h1><br>
+<a href="<?php $root;?>/Views/Home/pfcontacto.php" style="bottom:0; right:0; right:0; text-align:right; font-size:12px">Contáctenos</a>
 <p style="font-size:25px; text-align: center">¡Bienvenido!<br>Por favor llene los campos para registrarse</p><br>
 <table align="center">
 <tr>
@@ -73,6 +79,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
 </td>
 </tr>
 </table><br><br>
-<a href="login.php" style="bottom:0; left:0; right:0; text-align:left; font-size:12px">Regresar</a>
+<a href="index.php" style="bottom:0; left:0; right:0; text-align:left; font-size:12px">Regresar</a>
 </body>
 </html>
