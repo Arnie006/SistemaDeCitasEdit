@@ -114,7 +114,7 @@ function VerificarPorDia($a,$b){
                 <p><?php //echo $_SESSION['cedula'];?></p>
                 <hr>
                 <p>Correo Electrónico:</p>
-                <p><?php// echo implode(', ', $_SESSION['correo_user']);?></p>
+                <p></p>
                 <hr>
                 <p>Teléfono:</p>
                 <p><?php //echo implode(', ', $_SESSION['telefono_user']);?></p>
