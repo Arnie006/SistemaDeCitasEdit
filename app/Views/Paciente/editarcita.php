@@ -1,5 +1,7 @@
 <?php
 require "funciones.php";
+$root = realpath($_SERVER["DOCUMENT_ROOT"]);
+require "$root/config.php";
 if (!isset($_SESSION['nombre_user']))
 {                     
     session_unset();

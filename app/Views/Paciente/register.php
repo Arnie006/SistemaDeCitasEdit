@@ -1,5 +1,7 @@
 <?php 
 require "funciones.php";
+$root = realpath($_SERVER["DOCUMENT_ROOT"]);
+require "$root/config.php";
 //inicializa las variables
 $username = "";
 $nombre   = "";
@@ -8,7 +10,7 @@ $password = "";
 $tel      = "";
 $email   = "";
 $error = "";
-if ($_SERVER["REQUEST_METHOD"] == "POST"){
+if (isset($_POST['reg_user'])){
 
     $username =  mysqli_real_escape_string($link,$_POST['username']);
     $nombre = mysqli_real_escape_string($link,$_POST['nombre']);
