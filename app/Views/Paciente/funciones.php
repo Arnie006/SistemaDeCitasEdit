@@ -1,7 +1,5 @@
 <?php
 session_start();
-$root = realpath($_SERVER["DOCUMENT_ROOT"]);
-require "$root/config.php";
 
 
 
@@ -87,12 +85,12 @@ class Usuarios{
             
             //si algo salio en el query de sql, deja loggear a la persona
             if($a == 1) {
-                $success = TRUE;
-                return $success;
+                //$success = TRUE;
+                //return $success;
                 header("location: Views/Paciente/Escoger_Centro_Hospitalario.php");
             }else {
                 $success = FALSE;
-                return $success;
+                //return $success;
                 $error = "*Cédula o contraseña incorrectos. Por favor verifique sus datos e intente nuevamente";
             }
     }

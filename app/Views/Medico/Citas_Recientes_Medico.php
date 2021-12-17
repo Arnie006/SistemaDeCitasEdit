@@ -2,7 +2,7 @@
 //$root = realpath($_SERVER["DOCUMENT_ROOT"]);
 //require "$root/sistemadecitas-main/app/config.php";
 session_start();
-
+require 'funciones.php';    
 if (isset($_SESSION['username']))
 {                     
     session_unset();
@@ -15,6 +15,8 @@ if (isset($_SESSION['username']))
 $id = $_SESSION['row']['id'];
 $fecha = $_SESSION['fecha'];
 
+
+
 function VerificarPorDia($a,$b){
 
     $root = realpath($_SERVER["DOCUMENT_ROOT"]);
@@ -23,11 +25,7 @@ function VerificarPorDia($a,$b){
     $mostrar_citas = mysqli_query($link, $sql_show);
     $row = mysqli_fetch_array($mostrar_citas);
     while($row = mysqli_fetch_array($mostrar_citas)){
-        //echo $row['id_citas'];
-        //echo "<br>";
-        //echo $row['fecha'];
-        //echo "<br>";
-        //echo $row['nombre_medico'];
+            header('location:Citas_Recientes_Medico.php');
             ?>
     
             <section class="cuerpo3">
@@ -42,7 +40,18 @@ function VerificarPorDia($a,$b){
                     <p>Motivo de Cita:</p>
                     <p><?php echo $row['motivo'];?></p>
                     <hr>
-                
+                    <form method="post">
+            <input type="hidden" name="editar" value="EDIT">
+            <input type="hidden" name="id_editar" value="<?php echo $row['id_citas']; ?>">
+            <button class="edit" type="submit">Editar</button>      
+            </form>
+
+            <form method="POST" onsubmit="return confirm('Esta seguro que desea eliminar?');">
+            <input type="hidden" name="_METHOD" value="DELETE">
+            <input type="hidden" name="id" value="<?php echo $row['id_citas']; ?>">
+            <button class="delet" type="submit">Borrar</button>
+            </form>
+            <hr>
                 </div>
     
             </section>
@@ -52,7 +61,9 @@ function VerificarPorDia($a,$b){
             
         }
     }
-            ?>
+
+
+?>
 
 
 
@@ -111,10 +122,8 @@ function VerificarPorDia($a,$b){
         <section class="cuerpo2">
             <div class="mas-detalles2">
                 <p>No. de Seguro Social:</p>
-                <p><?php echo $_SESSION['cedula'];?></p>
                 <hr>
                 <p>Correo Electrónico:</p>
-                <p><?php echo implode(', ', $_SESSION['correo_user']);?></p>
                 <hr>
                 <p>Teléfono:</p>
                 <p><?php echo implode(', ', $_SESSION['telefono_user']);?></p>
@@ -122,37 +131,9 @@ function VerificarPorDia($a,$b){
             </div>
         </section>
 
-        <section class="cuerpo3">
-            <div class="mas-detalles3">
-                <hr>
-                <p>Centro Médico:</p>
-                <p><?php echo $_SESSION['cedula'];?></p>
-                <hr>
-                <p>Fecha:</p>
-                <p><?php echo implode(', ', $_SESSION['correo_user']);?></p>
-                <hr>
-                <p>Hora de Atención:</p>
-                <p><?php echo implode(', ', $_SESSION['telefono_user']);?></p>
-                <hr>
-                <p>Médico:</p>
-                <p><?php echo implode(', ', $_SESSION['telefono_user']);?></p>
-                <hr>
-                <p>Motivo de Cita:</p>
-                <p><?php echo implode(', ', $_SESSION['telefono_user']);?></p>
-                <hr>
 
-                <form method="post">
-                <input type="hidden" name="editar" value="EDIT">
-                <input type="hidden" name="id_editar" value="<?php echo $row['id_citas']; ?>">
-                <button class="edit" type="submit">Editar</button>      
-                </form>
 
-                <form method="POST" onsubmit="return confirm('Esta seguro que desea eliminar?');">
-                <input type="hidden" name="_METHOD" value="DELETE">
-                <input type="hidden" name="id" value="<?php echo $row['id_citas']; ?>">
-                <button class="delet" type="submit">Borrar</button>
-                </form>
-                <hr>
+
 
             </div>
         </section>
