@@ -72,8 +72,8 @@ if (isset($_POST['ingresar_cita'])){
         </section>
         <section class="menu_sistema">
         <div class="div_menu_sistema">
-                <h3><a class="btn_reservarcitahover" href="<?php $root;?>/Escoger_Centro_Hospitalario.php"><font color="#3498DB">Reservar Citas</font></a></h3>
-                <h3><a class="btn_reservarcitahover" href="<?php $root;?>/citasrecientes.php">Citas Recientes</a></h3>
+                <h3><a class="btn_reservarcitahover" href="Escoger_Centro_Hospitalario.php"><font color="#3498DB">Reservar Citas</font></a></h3>
+                <h3><a class="btn_reservarcitahover" href="citasrecientes.php">Citas Recientes</a></h3>
                 <h3><a class="btn_reservarcitahover" href="<?php $root;?>/Views/Home/pfcontacto.php">Contáctenos</a></h3>
             </div>
         </section>

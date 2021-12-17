@@ -89,7 +89,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'EDIT' || ($_SERVER['REQUEST_METHOD'] == 'POST
         <section class="menu_sistema">
             <div class="div_menu_sistema">
                 <h3><a class="btn_reservarcitahover" href="Escoger_Centro_Hospitalario.php">Reservar Citas</a></h3>
-                <h3><a class="btn_reservarcitahover" href="*"><font color="#2ECC71">Citas Recientes</font></a></h3>
+                <h3><a class="btn_reservarcitahover" href="citasrecientes.php"><font color="#2ECC71">Citas Recientes</font></a></h3>
                 <h3><a class="btn_reservarcitahover" href="<?php $root;?>/Views/Home/pfcontacto.php">Contáctenos</a></h3>
             </div>
         </section>
