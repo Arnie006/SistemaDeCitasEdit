@@ -1,4 +1,5 @@
 <?php
+session_start();
 if (!isset($_SESSION['nombre_user']))
 {                     
     session_unset();
@@ -6,6 +7,7 @@ if (!isset($_SESSION['nombre_user']))
     header("Location: login.php");
     exit();
 }
+
 $fecha ="";
 $doctor = "";
 $hora = "";
