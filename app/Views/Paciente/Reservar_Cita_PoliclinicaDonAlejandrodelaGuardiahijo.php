@@ -168,11 +168,7 @@ if (isset($_POST['ingresar_cita'])){
         
         <section>
             <div class="ir_atras">
-<<<<<<< HEAD
-                <a href="<?php $root;?>/Views/Paciente/Escoger_Centro_Hospitalario.php">><img class="botonatras" src="Design/Image/icono_salir.png" alt=""></a>
-=======
-                <a href="Escoger_Centro_Hospitalario.php"><img class="botonatras" src="<?php $root;?>/Design/Image/icono_salir.png" alt=""></a>
->>>>>>> 6714a1f0a884c4f4f65945cfe4809f0cbc9ebe9c
+                <a href="<?php $root;?>/Views/Paciente/Escoger_Centro_Hospitalario.php"><img class="botonatras" src="<?php $root;?>/Design/Image/icono_salir.png" alt=""></a>
                 <p class="texto_salir">Salir</p>
             </div>
         </section>

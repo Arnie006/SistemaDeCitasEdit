@@ -113,7 +113,7 @@ if (!isset($_SESSION['nombre_user']))
         
         <section>
             <div class="ir_atras">
-                <a href="logout.php" ><img class="botonatras" src="<?php $root;?>/Design/Image/icono_salir.png" alt=""></a>
+                <a href="<?php $root;?>/index.php" ><img class="botonatras" src="<?php $root;?>/Design/Image/icono_salir.png" alt=""></a>
                 <p class="texto_salir">Salir</p>
             </div>
         </section>
