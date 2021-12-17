@@ -64,6 +64,11 @@ if (isset($_POST['ingresar_cita'])){
     </header>
 
     <main>
+
+    <?php 
+    $root = realpath($_SERVER["DOCUMENT_ROOT"]);
+    ?>
+    
         <section class="cuerpo">
             <div class="mas-detalles">
                 <img class="user_info" src="<?php $root;?>/Design/Image/usuario.png" alt="">
@@ -163,7 +168,7 @@ if (isset($_POST['ingresar_cita'])){
         
         <section>
             <div class="ir_atras">
-                <a href="Escoger_Centro_Hospitalario.php"><img class="botonatras" src="<?php $root;?>/Design/Image/icono_salir.png" alt=""></a>
+                <a href="<?php $root;?>/Views/Paciente/Escoger_Centro_Hospitalario.php"><img class="botonatras" src="<?php $root;?>/Design/Image/icono_salir.png" alt=""></a>
                 <p class="texto_salir">Salir</p>
             </div>
         </section>
