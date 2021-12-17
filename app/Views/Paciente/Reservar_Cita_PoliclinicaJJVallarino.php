@@ -42,7 +42,7 @@ if (isset($_POST['ingresar_cita'])){
     $root = realpath($_SERVER["DOCUMENT_ROOT"]);
     ?>
 
-    <link rel="stylesheet" href="<?php $root;?>/Design/CSS/Descripcioncss.css">
+    <link rel="stylesheet" href="<?php $root;?>/Design/CSS/jjvallarino.css">
     <link rel="shortcut icon" href="<?php $root;?>/Design/Image/logo_css.png" type="image/x-icon">
 </head>
 
