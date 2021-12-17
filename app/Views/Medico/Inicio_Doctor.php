@@ -1,13 +1,13 @@
 <?php 
 $root = realpath($_SERVER["DOCUMENT_ROOT"]);
-require "$root/sistemadecitas-main/app/config.php";
+require "$root/config.php";
 session_start();?>
 <?php
 if (isset($_SESSION['username']))
 {                     
     session_unset();
     session_destroy();
-    header("Location: login.php");
+    header("Location: index.php");
     exit();
 }
 
@@ -32,8 +32,12 @@ if (isset($_POST['boton_enviar'])){
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Editar Cita</title>
 
-    <link rel="stylesheet" href="Inicio_Doctor.css">
-    <link rel="shortcut icon" href="logo_css.png" type="image/x-icon">
+    <?php 
+    $root = realpath($_SERVER["DOCUMENT_ROOT"]);
+    ?>
+
+    <link rel="stylesheet" href="<?php $root;?>/Design/CSS/Inicio_Doctor.css">
+    <link rel="shortcut icon" href="<?php $root;?>/Design/Image/logo_css.png" type="image/x-icon">
 </head>
 
 <body>
@@ -43,12 +47,12 @@ if (isset($_POST['boton_enviar'])){
 
             <!--logo-->
             <div>
-            <a href=""><img class="logo" src="circulo_fondo_logo_css.png" alt="Spoilers"></a>
+            <a href=""><img class="logo" src="<?php $root;?>/Design/Image/circulo_fondo_logo_css.png" alt=""></a>
             <!--menu-->
             </div>
             <ul>
                 <h1 class="det">Sistema Electrónico de Citas</h1>
-                <a href="LoginorSignin.html"><img class="user" src="usuario.png" alt=""></a>
+                <a href="#"><img class="user" src="<?php $root;?>/Design/Image/usuario.png" alt=""></a>
             </ul>
         </nav>
     </header>
@@ -56,14 +60,14 @@ if (isset($_POST['boton_enviar'])){
     <main>
         <section class="cuerpo">
             <div class="mas-detalles">
-                <img class="user_info" src="usuario.png" alt="">
+                <img class="user_info" src="<?php $root;?>/Design/Image/usuario.png" alt="">
                 <h2>Buen dia, <?php echo implode(', ', $_SESSION['nombre_user']);?></h2>
             </div>
         </section>
         <section class="menu_sistema">
             <div class="div_menu_sistema">
                 <h3><a class="btn_reservarcitahover" href="">Citas Recientes</a></h3>
-                <h3><a class="btn_reservarcitahover" href="pfcontacto.php">Contáctenos</a></h3>
+                <h3><a class="btn_reservarcitahover" href="<?php $root;?>/Views/Home/pfcontacto.php">Contáctenos</a></h3>
             </div>
         </section>
         <section class="nombre_hospital_sistema">
@@ -103,7 +107,7 @@ if (isset($_POST['boton_enviar'])){
         
         <section>
             <div class="ir_atras">
-                <a href='logout.php'><img class="botonatras" src="icono_salir.png" alt=""></a>
+                <a href='<?php $root;?>/logout.php'><img class="botonatras" src="<?php $root;?>/Design/Image/icono_salir.png" alt=""></a>
                 <p class="texto_salir">Salir</p>
             </div>
             <div class="boton_enviar">

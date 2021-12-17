@@ -7,7 +7,7 @@ if (isset($_SESSION['username']))
 {                     
     session_unset();
     session_destroy();
-    header("Location: login.php");
+    header("Location: index.php");
     exit();
 }
 
@@ -18,7 +18,7 @@ $fecha = $_SESSION['fecha'];
 function VerificarPorDia($a,$b){
 
     $root = realpath($_SERVER["DOCUMENT_ROOT"]);
-    require "$root/sistemadecitas-main/app/config.php";
+    require "$root/config.php";
     $sql_show = "select * from (select prueba_citas.id_citas, prueba_citas.fecha, prueba_citas.id_paciente, medicos.nombre_medico, users.nombre, prueba_citas.motivo, medicos.id from (((medicos inner join prueba_citas on prueba_citas.id_medico = medicos.id) inner join complejos on medicos.id_complejo=complejos.id) inner join users on prueba_citas.id_paciente=users.id_users)) as T where id = '$b' AND fecha LIKE '%{$a}%' order by fecha ASC";
     $mostrar_citas = mysqli_query($link, $sql_show);
     $row = mysqli_fetch_array($mostrar_citas);
@@ -65,8 +65,12 @@ function VerificarPorDia($a,$b){
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Citas Recientes</title>
 
-    <link rel="stylesheet" href="Citas_Recientes_Medico.css">
-    <link rel="shortcut icon" href="logo_css.png" type="image/x-icon">
+    <?php 
+    $root = realpath($_SERVER["DOCUMENT_ROOT"]);
+    ?>
+
+    <link rel="stylesheet" href="<?php $root;?>/Design/CSS/Citas_Recientes_Medico.css">
+    <link rel="shortcut icon" href="<?php $root;?>/Design/Image/logo_css.png" type="image/x-icon">
 </head>
 
 <body>
@@ -76,12 +80,12 @@ function VerificarPorDia($a,$b){
 
             <!--logo-->
             <div>
-            <a href=""><img class="logo" src="circulo_fondo_logo_css.png" alt="Spoilers"></a>
+            <a href=""><img class="logo" src="<?php $root;?>/Design/Image/circulo_fondo_logo_css.png" alt=""></a>
             <!--menu-->
             </div>
             <ul>
                 <h1 class="det">Sistema Electrónico de Citas</h1>
-                <a href="#"><img class="user" src="usuario.png" alt=""></a>
+                <a href="#"><img class="user" src="<?php $root;?>/Design/Image/usuario.png" alt=""></a>
             </ul>
         </nav>
     </header>
@@ -90,14 +94,14 @@ function VerificarPorDia($a,$b){
         <?php VerificarPorDia($fecha,$id);?>
         <section class="cuerpo">
             <div class="mas-detalles">
-                <img class="user_info" src="usuario.png" alt="">
+                <img class="user_info" src="<?php $root;?>/Design/Image/usuario.png" alt="">
                 <h2>Buen dia, <?php echo implode(', ', $_SESSION['nombre_user']);?></h2>
             </div>
         </section>
         <section class="menu_sistema">
             <div class="div_menu_sistema">
-                <h3><a class="btn_reservarcitahover" href="citasrecientes.php"><font color="#2ECC71">Citas Recientes</font></a></h3>
-                <h3><a class="btn_reservarcitahover" href="pfcontacto.php">Contáctenos</a></h3>
+                <h3><a class="btn_reservarcitahover" href="Citas_Recientes_Medico.php"><font color="#2ECC71">Citas Recientes</font></a></h3>
+                <h3><a class="btn_reservarcitahover" href="<?php $root;?>/Views/Home/pfcontacto.php">Contáctenos</a></h3>
             </div>
         </section>
     <form method = "post" action="Reservar_Cita_PoliclinicaJJBallarino.php">
@@ -120,7 +124,7 @@ function VerificarPorDia($a,$b){
         
         <section>
             <div class="ir_atras">
-                <a href="logout.php" ><img class="botonatras" src="icono_salir.png" alt=""></a>
+                <a href="<?php $root;?>/logout.php" ><img class="botonatras" src="<?php $root;?>/Design/Image/icono_salir.png" alt=""></a>
                 <p class="texto_salir">Salir</p>
             </div>
             <div class="boton_editar">
