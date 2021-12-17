@@ -19,6 +19,7 @@ class Usuarios{
         
         if ($user['username'] === $a) {
             $_SESSION['error'] = "El usuario ya existe";
+            return $success;
             header('location:error.php');
             }else{
                 $sql_registro = "insert into users (username, password, nombre, apellido, correo, telefono) values ( '$a', '$d', '$b', '$c', '$e', '$f');";
@@ -42,6 +43,7 @@ class Usuarios{
 
             if ($cita['fecha'] === $b){
                 $_SESSION['error'] = "El doctor ya tiene una cita para el horario seleccionado";
+                return $success;
                 header('location: error.php');
             }else{
                 $addcita_sql = "insert into prueba_citas (fecha, id_paciente, correo_paciente, id_medico) values ('$b', '$c', '$d', '$a');"; 
@@ -58,7 +60,9 @@ class Usuarios{
         
         }
         
-    function editarCita($a,$b,$c){    
+    function editarCita($a,$b,$c){   
+            $root = realpath($_SERVER["DOCUMENT_ROOT"]);
+            require "$root/config.php"; 
             $cita_check_query = "SELECT fecha FROM prueba_citas WHERE fecha='$a' and id_medico='$c'";
             $result = mysqli_query($link, $cita_check_query) or die (mysqli_error($link));
             $cita = mysqli_fetch_assoc($result);  
