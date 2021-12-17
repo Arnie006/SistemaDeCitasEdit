@@ -159,7 +159,7 @@ while($row = mysqli_fetch_array($mostrar_citas)){
         
         <section>
             <div class="ir_atras">
-                <img class="botonatras" src="<?php $root;?>/Design/Image/icono_salir.png" alt="">
+                <a href="<?php $root;?>/Views/Paciente/Escoger_Centro_Hospitalario.php"><img class="botonatras" src="<?php $root;?>/Design/Image/icono_salir.png" alt=""></a>
                 <p class="texto_salir">Salir</p>
             </div>
         </section>

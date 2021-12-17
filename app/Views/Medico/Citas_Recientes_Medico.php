@@ -111,14 +111,49 @@ function VerificarPorDia($a,$b){
         <section class="cuerpo2">
             <div class="mas-detalles2">
                 <p>No. de Seguro Social:</p>
-                <p><?php //echo $_SESSION['cedula'];?></p>
+                <p><?php echo $_SESSION['cedula'];?></p>
                 <hr>
                 <p>Correo Electrónico:</p>
-                <p></p>
+                <p><?php echo implode(', ', $_SESSION['correo_user']);?></p>
                 <hr>
                 <p>Teléfono:</p>
-                <p><?php //echo implode(', ', $_SESSION['telefono_user']);?></p>
+                <p><?php echo implode(', ', $_SESSION['telefono_user']);?></p>
                 <hr>
+            </div>
+        </section>
+
+        <section class="cuerpo3">
+            <div class="mas-detalles3">
+                <hr>
+                <p>Centro Médico:</p>
+                <p><?php echo $_SESSION['cedula'];?></p>
+                <hr>
+                <p>Fecha:</p>
+                <p><?php echo implode(', ', $_SESSION['correo_user']);?></p>
+                <hr>
+                <p>Hora de Atención:</p>
+                <p><?php echo implode(', ', $_SESSION['telefono_user']);?></p>
+                <hr>
+                <p>Médico:</p>
+                <p><?php echo implode(', ', $_SESSION['telefono_user']);?></p>
+                <hr>
+                <p>Motivo de Cita:</p>
+                <p><?php echo implode(', ', $_SESSION['telefono_user']);?></p>
+                <hr>
+
+                <form method="post">
+                <input type="hidden" name="editar" value="EDIT">
+                <input type="hidden" name="id_editar" value="<?php echo $row['id_citas']; ?>">
+                <button class="edit" type="submit">Editar</button>      
+                </form>
+
+                <form method="POST" onsubmit="return confirm('Esta seguro que desea eliminar?');">
+                <input type="hidden" name="_METHOD" value="DELETE">
+                <input type="hidden" name="id" value="<?php echo $row['id_citas']; ?>">
+                <button class="delet" type="submit">Borrar</button>
+                </form>
+                <hr>
+
             </div>
         </section>
         
@@ -127,10 +162,7 @@ function VerificarPorDia($a,$b){
                 <a href="<?php $root;?>/logout.php" ><img class="botonatras" src="<?php $root;?>/Design/Image/icono_salir.png" alt=""></a>
                 <p class="texto_salir">Salir</p>
             </div>
-            <div class="boton_editar">
-                <a href=""><p class="edit">Editar</p></a>
-                <a href=""><p class="delet">Eliminar</p></a>
-            </div>
+            
         </section>
         
         

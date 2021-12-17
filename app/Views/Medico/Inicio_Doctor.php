@@ -111,10 +111,10 @@ if (isset($_POST['boton_enviar'])){
                 <p class="texto_salir">Salir</p>
             </div>
             <div class="boton_enviar">
-                <input name="boton_enviar" type="submit" class="btn_enviar">Enviar</button>
+                <input name="boton_enviar" type="submit" value="Enviar" class="btn_enviar"></button>
             </div>
             <div class="boton_ver">
-                <button name="boton" type="submit" value="HTML" class="btn_ver">Ver Citas</button>
+                <button name="boton" type="submit" value="Ver Citas" class="btn_ver">Ver Citas</button>
             </div>
         </section>
         
