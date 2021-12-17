@@ -68,7 +68,7 @@ if (isset($_POST['ingresar_cita'])){
     <?php 
     $root = realpath($_SERVER["DOCUMENT_ROOT"]);
     ?>
-    
+
         <section class="cuerpo">
             <div class="mas-detalles">
                 <img class="user_info" src="<?php $root;?>/Design/Image/usuario.png" alt="">
