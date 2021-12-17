@@ -1,5 +1,5 @@
 @charset "UTF-8";
-body{background-color: #202e55; background-image: url(banner2.jpg); background-repeat: repeat-x;background-position: top}
+body{background-color: #202e55; background-image: url(Design/Image/banner2.jpg); background-repeat: repeat-x;background-position: top}
 h1 {font-family: helvetica, sans-serif; text-align: center; font-weight: normal; color: #ffffff; text-shadow: 3px 2px #000000}
 p {font-family: helvetica, sans-serif; color: #ffffff}
 label {font-family: helvetica, sans-serif; color:#ffffff}

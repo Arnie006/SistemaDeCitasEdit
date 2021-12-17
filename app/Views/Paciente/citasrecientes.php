@@ -1,6 +1,5 @@
 <?php
-$root = realpath($_SERVER["DOCUMENT_ROOT"]);
-require "$root/sistemadecitas-main/app/config.php";
+require_once "app/config.php";
 session_start();
 
 
