@@ -19,7 +19,7 @@ if ($user['username'] === $a) {
     }else{
         $sql_registro = "insert into users (username, password, nombre, apellido, correo, telefono) values ( '$a', '$d', '$b', '$c', '$e', '$f');";
         mysqli_query($link, $sql_registro);
-        header('location: index.php');
+        header("location:http://localhost:81/index.php");
     }
 
 
