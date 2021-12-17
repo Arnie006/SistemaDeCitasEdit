@@ -1,6 +1,6 @@
 <?php
 $root = realpath($_SERVER["DOCUMENT_ROOT"]);
-require "$root/sistemadecitas-main/app/config.php";
+require "$root/config.php";
 session_start();
 
 $error="";
@@ -33,11 +33,16 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
 <head>
 <meta charset="UTF-8">
 <title>Iniciar sesión</title>
-<link rel="stylesheet" href="pfestilos.css">
-<link rel="icon" href="logo1.png">
+
+<?php 
+    $root = realpath($_SERVER["DOCUMENT_ROOT"]);
+?>
+
+<link rel="stylesheet" href="<?php $root;?>/Design/CSS/pfestilos.css">
+<link rel="icon" href="<?php $root;?>/Design/Image/logo1.png">
 </head>
 <body>
-<h1 style="text-shadow: 3px 2px #000000"><img src="logo1.png" width="100" height="100" align="center" style="margin-right: 20px">SISTEMA ELECTRÓNICO DE CITAS</h1>
+<h1 style="text-shadow: 3px 2px #000000"><img src="<?php $root;?>/Design/Image/logo1.png" width="100" height="100" align="center" style="margin-right: 20px">SISTEMA ELECTRÓNICO DE CITAS</h1>
 <form style="font-size:11px; margin-top: 60px; text-align: center" action="#" method="POST">
     <p><?php echo $error;?><br></p>
     <label for="nombre">Usuario</label><br>
@@ -45,7 +50,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
 	<label for="contrasena">Contraseña</label><br>
 	<input style="text-align: center" type="password" name="password" required><br><br><br>
 	<input style="font-size:15px; background-color: transparent; color:#78d9ff; border:none; cursor:pointer; font-weight: bold" type="submit" value="Ingresar">
-    <br>Para pacientes: <a href="login.php">Login Pacientes</a>
+    <br>Para pacientes: <a href="<?php $root;?>/index.php">Login Pacientes</a>
 </form>
 
 </body>

@@ -79,6 +79,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
 </td>
 </tr>
 </table><br><br>
-<a href="index.php" style="bottom:0; left:0; right:0; text-align:left; font-size:12px">Regresar</a>
+<a href="<?php $root;?>/index.php" style="bottom:0; left:0; right:0; text-align:left; font-size:12px">Regresar</a>
 </body>
 </html>
