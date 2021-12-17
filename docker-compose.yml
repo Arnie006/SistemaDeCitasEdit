@@ -17,7 +17,7 @@ services:
     build:
       context: ./
     volumes:
-      - ./app/Views/Paciente:/var/www/html
+      - ./app:/var/www/html
     ports:
       - 81:80
     depends_on:
