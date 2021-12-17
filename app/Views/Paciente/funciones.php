@@ -1,12 +1,12 @@
 <?php
 session_start();
 $root = realpath($_SERVER["DOCUMENT_ROOT"]);
-require "$root/sistemadecitas-main/app/config.php";
+require "$root/config.php";
 
 function registrarUser($a,$b,$c,$d,$e,$f){
 
 $root = realpath($_SERVER["DOCUMENT_ROOT"]);
-require "$root/sistemadecitas-main/app/config.php";
+require "$root/config.php";
 
 
 $user_check_query = "SELECT * FROM users WHERE username='$a'";
@@ -27,7 +27,7 @@ if ($user['username'] === $a) {
 
 function addCita($a,$b,$c,$d){
     $root = realpath($_SERVER["DOCUMENT_ROOT"]);
-    require "$root/sistemadecitas-main/app/config.php";
+    require "$root/config.php";
     $cita_check_query = "SELECT fecha FROM prueba_citas WHERE fecha='$b' and id_medico='$a'";
     $result = mysqli_query($link, $cita_check_query) or die (mysqli_error($link));
     $cita = mysqli_fetch_assoc($result);  

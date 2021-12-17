@@ -1,5 +1,6 @@
 <?php
-require_once "app/config.php";
+    $root = realpath($_SERVER["DOCUMENT_ROOT"]);
+    require "$root/config.php";
 session_start();
 
 
