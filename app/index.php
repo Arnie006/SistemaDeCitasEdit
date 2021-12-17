@@ -48,7 +48,7 @@ function login_usuario(){
     
         //si algo salio en el query de sql, deja loggear a la persona
         if($count == 1) {
-            header("location: Escoger_Centro_Hospitalario.php");
+            header("location: Views/Paciente/Escoger_Centro_Hospitalario.php");
         }else {
            $error = "*Cédula o contraseña incorrectos. Por favor verifique sus datos e intente nuevamente";
         }

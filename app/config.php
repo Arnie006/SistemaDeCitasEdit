@@ -5,7 +5,8 @@ define('DB_PASSWORD', 'Fito!3995799');
 define('DB_NAME', 'ingweb');
 
 // Conectar a la bdd
-$link = mysqli_connect(DB_USERNAME, DB_USERNAME, DB_PASSWORD, DB_NAME, 3010);
+$link = new mysqli("mysql", "root", "Fito!3995799", "ingweb");
+return $link;
  
 // Revisar conexion
 if($link === false){

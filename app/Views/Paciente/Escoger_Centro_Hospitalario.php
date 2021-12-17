@@ -4,7 +4,7 @@ if (!isset($_SESSION['nombre_user']))
 {                     
     session_unset();
     session_destroy();
-    header("Location: login.php");
+    header("Location: index.php");
     exit();
 }
 ?>
@@ -18,7 +18,7 @@ if (!isset($_SESSION['nombre_user']))
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sistema Electrónico de Citas</title>
 
-    <link rel="stylesheet" href="Escoger_Centro_Hospitalario.css">
+    <link rel="stylesheet" href="Design/CSS/Escoger_Centro_Hospitalario.css">
     <link rel="shortcut icon" href="Design/Image/logo_css.png" type="image/x-icon">
 </head>
 
@@ -29,7 +29,7 @@ if (!isset($_SESSION['nombre_user']))
 
             <!--logo-->
             <div>
-            <a href=""><img class="logo" src="DEsign/Image/circulo_fondo_logo_css.png" alt=""></a>
+            <a href=""><img class="logo" src="Design/Image/circulo_fondo_logo_css.png" alt=""></a>
             <!--menu-->
             </div>
             <ul>
