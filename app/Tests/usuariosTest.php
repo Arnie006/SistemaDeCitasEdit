@@ -23,4 +23,9 @@ class usuariosTest extends TestCase {
             $this->assertEquals(TRUE, $usuarios->editarCita('2021-12-10 09:00:00',5 ,20 ));
 
         }
+
+        public function testlogin_usuario(){
+            $usuarios = new Usuarios();
+            $this->assertEquals(TRUE, $usuarios->login_usuario(1));
+        }
 }
